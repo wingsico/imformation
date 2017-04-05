@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height:100%;
+  width:100%;
+  overflow-x: hidden;
+  font-size: 10px;
+}
+
+.header {
+  font-size:2.5rem;
+  text-align: center;
+  font-family: "微软雅黑",sans-serif;
+  color: #44ceff;
+  height:5rem;
+  line-height:5rem;
+}
+.title .title_lists {
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height:3.4rem;
+  line-height: 3.4rem;
+}
+
+.title .title_lists li {
+  color: rgb(115,115,115);
+  list-style: none;
+  display: inline-block;
+  font-family: "微软雅黑", sans-serif;
+  font-size: 1.5rem;
+  height:3.4rem;
+  line-height: 3.4rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.title .title_lists li:nth-child(2){
+  margin: 0 10%;
+}
+
+#page_on {
+  color: #44ceff;
+  border-bottom: 3px solid #44ceff;
+  height:3.1rem;
+  line-height:3.1rem;
+}
+
+#news_lists {
+  list-style: none;
+}
+
+#news_lists li {
+  border-bottom: 1px solid #ccc;
+  width:90%;
+  margin: 0 auto;
+  font-family: "微软雅黑", sans-serif;
+}
+#news_lists .text {
+  display: inline-block;
+  width:70%;
+}
+#news_lists .text h4 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  width:100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+#news_lists .text span {
+  font-size: 1.4rem;
+  color: rgb(115,115,115);
+}
+
+#news_lists .main {
+  padding: 5% 0;
+  position: relative;
+  display: inline-block;
+  width:100%;
+}
+
+#news_lists .main .picture {
+  display: inline-block;
+  width:25%;
+  padding: 5% 0;
+}
+#news_lists .main .picture img {
+
+  height:;
+}
+
+
