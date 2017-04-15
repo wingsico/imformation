@@ -29,14 +29,14 @@
   </div>
 
 
-  <div id="container">
+  <div id="container" v-if="!showA">
     <ul id="news_lists" v-if="newsShow">
-      <li v-for="item in lists">
+      <li v-for="item in lists.data" v-on:click="getArticle(item)">
         <div class="main">
           <div class="text">
             <h4>{{ item.title }}</h4>
             <p>
-              <span>{{ item.date }}</span>
+              <span>{{ item.publish_time }}</span>
               <span>{{ item.author }}</span>
             </p>
           </div>
@@ -47,12 +47,12 @@
       </li>
     </ul>
     <ul id="survey_lists" v-if="surveyShow">
-      <li v-for="item in lists">
+      <li v-for="item in lists.data" v-on:click="getArticle(item)">
         <div class="main">
           <div class="text">
             <h4>{{ item.title }}</h4>
             <p>
-              <span>{{ item.date }}</span>
+              <span>{{ item.publish_time }}</span>
               <span>{{ item.author }}</span>
             </p>
           </div>
@@ -63,15 +63,32 @@
       </li>
     </ul>
     <ul id="notice_lists" v-if="noticeShow">
-      <li v-for="item in lists">
+      <li v-for="item in lists.data" v-on:click="getArticle(item)">
         <div class="main">
           <p>
-            <span class="dateStyle">[<span class="">{{ item.date }}</span>]</span>
+            <span class="dateStyle">[<span class="">{{ item.publish_time }}</span>]</span>
             <span>{{ item.title }}</span>
           </p>
         </div>
       </li>
     </ul>
+  </div>
+
+  <div v-if="showA" id="article">
+    <h4 class="artcile_title">{{ article.title }}</h4>
+    <div>
+      <span class="article_date">{{ article.publish_time }}</span>
+      <span>{{ article.author }}</span>
+    </div>
+    <article v-html="article.body"></article>
+  </div>
+
+  <div class="loading" style="text-align: center" v-if="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </div>
 <script src="imformation.js"></script>

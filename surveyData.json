@@ -1,16 +1,26 @@
-[
-  {
-    "title": "你还迷信科学吗？",
-    "date": "2017-03-27",
-    "author": "贝爷的生存食谱",
-    "url": "./p1.jpeg",
-    "alt": "雷姆"
-  },
-  {
-    "title": "世界之最",
-    "date": "2017-03-27",
-    "author": "ncuhome",
-    "url": "./p2.jpg",
-    "alt": "不认识"
-  }
-]
+{
+  "data":[
+    {
+      "title": "学校里的变化你都嗅到了么？",
+      "publish_time": "2017-03-27",
+      "author": "昂扬记者团",
+      "url": "./p1.jpeg",
+      "alt": "雷姆",
+      "news_id": "01"
+    },
+    {
+      "title": "学校里的变化你都嗅到了么？",
+      "publish_time": "2017-03-27",
+      "author": "昂扬记者团",
+      "url": "./p1.jpeg",
+      "alt": "雷姆",
+      "news_id": "01"
+    }
+  ],
+  "message": "完成",
+  "status": 1,
+  "total": 202,
+  "pages": 3,
+  "next": 4,
+  "prev": 2
+}
