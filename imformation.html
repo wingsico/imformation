@@ -15,7 +15,7 @@
 <div id="body">
   <!--头部标题，随着内容切换-->
   <header class="header">
-    <span class="back"></span>
+    <span class="back" v-if="showA" v-on:click="backToIndex"><img src="back.png" alt="返回"></span>
     <span class="toggle">{{ message }}</span>
   </header>
 
@@ -31,7 +31,7 @@
 
   <div id="container" v-if="!showA">
     <ul id="news_lists" v-if="newsShow">
-      <li v-for="item in lists.data" v-on:click="getArticle(item)">
+      <li v-for="item in newsLists.data" v-on:click="getNewsArticle(item)">
         <div class="main">
           <div class="text">
             <h4>{{ item.title }}</h4>
@@ -45,9 +45,10 @@
           </div>
         </div>
       </li>
+      <button class="moreList">更多内容</button>
     </ul>
     <ul id="survey_lists" v-if="surveyShow">
-      <li v-for="item in lists.data" v-on:click="getArticle(item)">
+      <li v-for="item in surveyLists.data" v-on:click="getSurveyArticle(item)">
         <div class="main">
           <div class="text">
             <h4>{{ item.title }}</h4>
@@ -61,9 +62,10 @@
           </div>
         </div>
       </li>
+      <button class="moreList">更多内容</button>
     </ul>
     <ul id="notice_lists" v-if="noticeShow">
-      <li v-for="item in lists.data" v-on:click="getArticle(item)">
+      <li v-for="item in noticeLists.data" v-on:click="getNoticeArticle(item)">
         <div class="main">
           <p>
             <span class="dateStyle">[<span class="">{{ item.publish_time }}</span>]</span>
@@ -71,6 +73,7 @@
           </p>
         </div>
       </li>
+      <button class="moreList">更多内容</button>
     </ul>
   </div>
 
@@ -90,6 +93,8 @@
     <span></span>
     <span></span>
   </div>
+
+  <div class="tips" v-if="showTips" transition="tips">{{ tips }}</div>
 </div>
 <script src="imformation.js"></script>
 </body>

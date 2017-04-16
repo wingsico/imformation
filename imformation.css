@@ -73,6 +73,18 @@ html {
     z-index: 999;
 }
 
+.header .back {
+    position: absolute;
+    left: 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.header .back img {
+    width: 5rem;
+    height: 5rem;
+}
+
 .title {
     margin-top: 5rem;
 }
@@ -110,6 +122,9 @@ html {
     background-color: #f5f5f5;
 }
 
+#container li:visited {
+    color: #f5f5f5;
+}
 #news_lists,
 #survey_lists {
     list-style: none;
@@ -300,4 +315,44 @@ html {
 
 .loading span:nth-child(5) {
     -webkit-animation-delay: 0.8s;
+}
+
+.moreList {
+    border: none;
+    outline: none;
+    display: block;
+    background-color: #44ceff;
+    color: #fff;
+    width:8rem;
+    height:3rem;
+    text-align: center;
+    line-height: 3rem;
+    margin: 1rem auto;
+}
+
+.moreList:active {
+    background-color: dodgerblue;
+}
+
+.tips-transition ,.tips {
+    position: fixed;
+    top:9rem;
+    width:8rem;
+    height:3rem;
+    line-height:3rem;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+    font-size:1rem;
+    transition: opacity 1s;
+}
+
+.tips-enter {
+    opacity: 1;
+}
+
+.tips-leave {
+    opacity:0;
 }
